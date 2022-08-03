@@ -1,6 +1,9 @@
-main: luminous.safechat.Main
 name: SafeChat
 version: 1.0.0
 
+main: luminous.safechat.Main
+api-version: 1.19
+
 commands:
-  - safechat:
+  safechat:
+    description: Test whether the plugin is enabled.

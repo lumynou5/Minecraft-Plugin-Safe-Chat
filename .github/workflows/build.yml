@@ -11,7 +11,12 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: temurin
-          java-version: '17'
+          java-version: 17
+          cache: gradle
       - uses: SpraxDev/Action-SpigotMC@v4
         with:
           versions: 1.19.1
+      - uses: actions/upload-artifact@v3
+        with:
+          name: 1.19.1
+          path: '*.jar'

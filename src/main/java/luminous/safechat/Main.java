@@ -16,8 +16,9 @@ public class Main extends JavaPlugin {
 class ChatListener implements Listener {
     @EventHandler
     public void onAsyncPlayerChatEvent(AsyncPlayerChatEvent event) {
+        String sender = event.getPlayer().getName();
         String message = event.getMessage();
         event.setCancelled(true);
-        Bukkit.broadcastMessage(message);
+        Bukkit.broadcastMessage("<" + sender + "> " + message);
     }
 }

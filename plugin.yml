@@ -1,0 +1,6 @@
+main: luminous.safechat.Main
+name: SafeChat
+version: 1.0.0
+
+commands:
+  - safechat:

@@ -12,6 +12,7 @@ import org.jetbrains.annotations.NotNull;
 public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
+        Bukkit.getPluginCommand("safechat").setExecutor(this);
         Bukkit.getPluginManager().registerEvents(new ChatListener(), this);
     }
 
@@ -20,11 +21,8 @@ public class Main extends JavaPlugin {
                              @NotNull Command command,
                              @NotNull String label,
                              @NotNull String[] args) {
-        if (label.equals("safe-chat")) {
-            sender.sendMessage("Safe Chat is enabled!");
-            return true;
-        }
-        return false;
+        sender.sendMessage("Safe Chat is enabled!");
+        return true;
     }
 }
 

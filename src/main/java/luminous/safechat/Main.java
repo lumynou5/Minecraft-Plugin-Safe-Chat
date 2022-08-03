@@ -1,6 +1,7 @@
 package luminous.safechat;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.event.EventHandler;
@@ -21,7 +22,7 @@ public class Main extends JavaPlugin {
                              @NotNull Command command,
                              @NotNull String label,
                              @NotNull String[] args) {
-        sender.sendMessage("Safe Chat is enabled!");
+        sender.sendMessage(ChatColor.GRAY + "Safe Chat is enabled!");
         return true;
     }
 }

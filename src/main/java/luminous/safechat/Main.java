@@ -1,15 +1,30 @@
 package luminous.safechat;
 
 import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
 
 public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(new ChatListener(), this);
+    }
+
+    @Override
+    public boolean onCommand(@NotNull CommandSender sender,
+                             @NotNull Command command,
+                             @NotNull String label,
+                             @NotNull String[] args) {
+        if (label.equals("safe-chat")) {
+            sender.sendMessage("Safe Chat is enabled!");
+            return true;
+        }
+        return false;
     }
 }
 

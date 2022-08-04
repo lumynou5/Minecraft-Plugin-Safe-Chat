@@ -38,4 +38,4 @@ jobs:
           asset_name: '*.jar'
           asset_label: 1.19.1
         env:
-          GITHUB_TOKEN: ${{ secret.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

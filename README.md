@@ -1,6 +1,13 @@
 # Safe-Chat
 
-No more reportable message without the "unsafe" mark.
+No more reportable message and "unsafe" marks.
 
-Whispers are still reportable now.
-It'll be solved in the future.
+## Features
+
+All the messages in the server are protected, so you cannot report anyone.
+
+![Screenshot](https://truth.bahamut.com.tw/s01/202208/2d76aca3213c8848910a35327962c83b.JPG?w=1000)
+
+And there's no any "unsafe" mark, too!
+
+The direct messages (using command such as `/w`) are also protected now.

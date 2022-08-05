@@ -1,5 +1,6 @@
 name: SafeChat
 version: 1.0.0
+author: Luminous-Coder
 
 main: luminous.safechat.Main
 api-version: 1.19
@@ -7,3 +8,9 @@ api-version: 1.19
 commands:
   safechat:
     description: Test whether the plugin is enabled.
+  msg:
+    aliases:
+      - tell
+      - w
+    description: Send a private message to another player.
+    usage: /msg <player name or UUID> <message>

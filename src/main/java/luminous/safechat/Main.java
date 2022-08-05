@@ -64,7 +64,8 @@ class ChatListener implements Listener, CommandExecutor {
             message.append(args[i]);
         }
 
-        sender.sendMessage(ChatColor.GRAY + sender.getName() + " -> " + player.getName() + ": " + message);
+        sender.sendMessage(ChatColor.GRAY + "YOU -> " + player.getName() + ": " + ChatColor.WHITE + message);
+        player.sendMessage(ChatColor.GRAY + sender.getName() + " -> YOU: " + ChatColor.WHITE + message);
         return true;
     }
 

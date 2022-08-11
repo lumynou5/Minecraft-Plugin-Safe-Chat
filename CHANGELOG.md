@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 Released on:
 ### Added
 - Direct message protection.
+- Message format configuration.
 
 ## v1.0.0
 Released on: 2022-08-04

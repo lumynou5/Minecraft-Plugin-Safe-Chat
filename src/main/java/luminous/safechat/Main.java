@@ -53,6 +53,7 @@ public class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new ChatListener(), this);
 
         config = getConfig();
+        saveConfig();
     }
 
     @Override

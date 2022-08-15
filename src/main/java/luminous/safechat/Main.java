@@ -52,8 +52,8 @@ public class Main extends JavaPlugin {
         Bukkit.getPluginCommand("msg").setExecutor(new ChatListener());
         Bukkit.getPluginManager().registerEvents(new ChatListener(), this);
 
+        saveDefaultConfig();
         config = getConfig();
-        saveConfig();
     }
 
     @Override

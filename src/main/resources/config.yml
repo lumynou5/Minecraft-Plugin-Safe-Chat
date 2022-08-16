@@ -1,3 +1,16 @@
+# Control the chat format
+#
+# Format: {sender} - The message sender.
 global-message-format: '{_GRAY}<{sender}>{_WHITE} {message}'
+
+# Control the direct message format the sender see.
+#
+# Format {sender} - The message sender.
+#        {target} - The message receiver.
 direct-message-sender-format: '{_GRAY}<YOU -> {target}>{_WHITE} {message}'
+
+# Control the direct message format the receiver see.
+#
+# Format {sender} - The message sender.
+#        {target} - The message receiver.
 direct-message-target-format: '{_GRAY}<{sender} -> YOU>{_WHITE} {message}'

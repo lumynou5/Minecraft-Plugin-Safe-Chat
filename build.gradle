@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'luminous'
-version '1.0.0'
+version plugin_version
 
 repositories {
     mavenCentral()

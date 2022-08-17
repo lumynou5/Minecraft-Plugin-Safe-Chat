@@ -9,7 +9,7 @@ Because of the way this plugin uses, the game won't mark messages as unverified 
 
 ![Screenshot](https://truth.bahamut.com.tw/s01/202208/2d76aca3213c8848910a35327962c83b.JPG?w=1000)
 
-## Configuration
+## Configurations
 
 It's able to configure the format of the messages.
 When the first time the plugin enabled, it'll automatically generate the configuration file,
@@ -44,3 +44,12 @@ The table below shows the general ones.
 | `_RESET`         | Set the following text to the default style. |
 
 You can find specific ones for every entry in the generated configuration file.
+
+## Acknowledgements
+
+Thanks [Sapiens_homo](https://github.com/laizhengbao), who helped me to test the plugin.
+
+## License
+
+The source code is distributed under the MIT license.
+See [LICENSE.md](LICENSE.md) for further information.

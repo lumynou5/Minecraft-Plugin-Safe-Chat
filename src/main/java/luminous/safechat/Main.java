@@ -19,7 +19,10 @@ import java.util.Map;
 import java.util.UUID;
 
 public class Main extends JavaPlugin {
-    public static FileConfiguration config = null;
+    private static FileConfiguration config = null;
+    public static String configGlobalMessageFormat = null;
+    public static String configDirectMessageSenderFormat = null;
+    public static String configDirectMessageTargetFormat = null;
 
     public static final Map<String, ChatColor> CHAT_COLOR_SHEET = Map.ofEntries(
             Map.entry("_BLACK", ChatColor.BLACK),
@@ -48,12 +51,28 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        // Register command executors.
         Bukkit.getPluginCommand("safechat").setExecutor(this);
         Bukkit.getPluginCommand("msg").setExecutor(new ChatListener());
+
+        // Register event listener.
         Bukkit.getPluginManager().registerEvents(new ChatListener(), this);
 
-        saveDefaultConfig();
+        // Get configurations.
+        saveDefaultConfig(); // Save default configuration file if had no one.
         config = getConfig();
+        configGlobalMessageFormat = Fmt.format(
+                config.getString("global-message-format"),
+                CHAT_COLOR_SHEET
+        );
+        configDirectMessageSenderFormat = Fmt.format(
+                config.getString("direct-message-sender-format"),
+                CHAT_COLOR_SHEET
+        );
+        configDirectMessageTargetFormat = Fmt.format(
+                config.getString("direct-message-target-format"),
+                CHAT_COLOR_SHEET
+        );
     }
 
     @Override
@@ -103,14 +122,13 @@ class ChatListener implements Listener, CommandExecutor {
                 "target", target.getName(),
                 "message", message.toString()
         ));
-        formatArgs.putAll(Main.CHAT_COLOR_SHEET);
 
         sender.sendMessage(Fmt.format(
-                Main.config.getString("direct-message-sender-format"),
+                Main.configDirectMessageSenderFormat,
                 formatArgs
         ));
         target.sendMessage(Fmt.format(
-                Main.config.getString("direct-message-target-format"),
+                Main.configDirectMessageTargetFormat,
                 formatArgs
         ));
         return true;
@@ -129,7 +147,7 @@ class ChatListener implements Listener, CommandExecutor {
         formatArgs.putAll(Main.CHAT_COLOR_SHEET);
 
         Bukkit.broadcastMessage(Fmt.format(
-                Main.config.getString("global-message-format"),
+                Main.configGlobalMessageFormat,
                 formatArgs
         ));
     }

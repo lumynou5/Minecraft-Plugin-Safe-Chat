@@ -82,6 +82,7 @@ public class Main extends JavaPlugin {
                              @NotNull String[] args) {
         // Get configurations.
         saveDefaultConfig(); // Save default configuration file if had no one.
+        reloadConfig();
         config = getConfig();
         configGlobalMessageFormat = Fmt.format(
                 config.getString("global-message-format"),
@@ -95,6 +96,8 @@ public class Main extends JavaPlugin {
                 config.getString("direct-message-target-format"),
                 CHAT_COLOR_SHEET
         );
+
+        sender.sendMessage("Reloaded configurations!");
 
         return true;
     }

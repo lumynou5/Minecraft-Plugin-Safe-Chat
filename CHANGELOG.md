@@ -3,8 +3,12 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 Released on:
+### Added
+- `reload-config` command to reload the configurations.
 ### Changed
 - The colors in message format configurations are formatted when enabled now.
+### Removed
+- Test command.
 
 ## v1.1.0
 Released on: 2022-08-16

@@ -52,7 +52,7 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         // Register command executors.
-        Bukkit.getPluginCommand("safechat").setExecutor(this);
+        Bukkit.getPluginCommand("reload-config").setExecutor(this);
         Bukkit.getPluginCommand("msg").setExecutor(new ChatListener());
 
         // Register event listener.
@@ -80,7 +80,22 @@ public class Main extends JavaPlugin {
                              @NotNull Command command,
                              @NotNull String label,
                              @NotNull String[] args) {
-        sender.sendMessage(ChatColor.GRAY + "Safe Chat is enabled!");
+        // Get configurations.
+        saveDefaultConfig(); // Save default configuration file if had no one.
+        config = getConfig();
+        configGlobalMessageFormat = Fmt.format(
+                config.getString("global-message-format"),
+                CHAT_COLOR_SHEET
+        );
+        configDirectMessageSenderFormat = Fmt.format(
+                config.getString("direct-message-sender-format"),
+                CHAT_COLOR_SHEET
+        );
+        configDirectMessageTargetFormat = Fmt.format(
+                config.getString("direct-message-target-format"),
+                CHAT_COLOR_SHEET
+        );
+
         return true;
     }
 }

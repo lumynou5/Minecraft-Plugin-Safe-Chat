@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+Released on:
+### Changed
+- The colors in message format configurations are formatted when enabled now.
+
 ## v1.1.0
 Released on: 2022-08-16
 ### Added

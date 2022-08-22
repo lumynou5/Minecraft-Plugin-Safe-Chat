@@ -129,10 +129,10 @@ class ChatListener implements Listener, CommandExecutor {
 
         StringBuilder message = new StringBuilder();
         for (int i = 1; i < args.length; i++) {
-            message.append(args[i]);
+            message.append(args[i]).append(' ');
         }
 
-        Map<String, Object> formatArgs = new HashMap<>(Map.of(
+        Map<String, String> formatArgs = new HashMap<>(Map.of(
                 "sender", sender.getName(),
                 "target", target.getName(),
                 "message", message.toString()
@@ -155,11 +155,10 @@ class ChatListener implements Listener, CommandExecutor {
         String message = event.getMessage();
         event.setCancelled(true);
 
-        Map<String, Object> formatArgs = new HashMap<>(Map.of(
+        Map<String, String> formatArgs = new HashMap<>(Map.of(
                 "sender", sender,
                 "message", message.toString()
         ));
-        formatArgs.putAll(Main.CHAT_COLOR_SHEET);
 
         Bukkit.broadcastMessage(Fmt.format(
                 Main.configGlobalMessageFormat,

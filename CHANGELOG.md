@@ -7,6 +7,8 @@ Released on:
 - `reload-config` command to reload the configurations.
 ### Changed
 - The colors in message format configurations are formatted when enabled now.
+### Fixed
+- Missing spaces in direct messages.
 ### Removed
 - Test command.
 

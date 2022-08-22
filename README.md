@@ -9,6 +9,11 @@ Because of the way this plugin uses, the game won't mark messages as unverified 
 
 ![Screenshot](https://truth.bahamut.com.tw/s01/202208/2d76aca3213c8848910a35327962c83b.JPG?w=1000)
 
+### Commands
+
+- `reload-config`: Reload the configurations. Needed permission `bukkit.command.reload`.
+- `msg`, `tell`, and `w`: (Override vanilla commands) Safe direct chat.
+
 ## Configurations
 
 It's able to configure the format of the messages.
@@ -47,7 +52,7 @@ You can find specific ones for every entry in the generated configuration file.
 
 ## Acknowledgements
 
-Thanks [Sapiens_homo](https://github.com/laizhengbao), who helped me to test the plugin.
+Thanks [Sapiens_homo](https://gitlab.com/Sapiens_homo), who helped me to test the plugin.
 
 ## License
 

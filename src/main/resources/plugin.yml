@@ -2,12 +2,13 @@ name: SafeChat
 version: 1.1.0
 author: Luminous-Coder
 
-main: luminous.safechat.Main
+main: lumynous.safechat.Main
 api-version: 1.19
 
 commands:
-  safechat:
-    description: Test whether the plugin is enabled.
+  reload-config:
+    description: Reload the configurations.
+    permission: bukkit.command.reload
   msg:
     aliases:
       - tell

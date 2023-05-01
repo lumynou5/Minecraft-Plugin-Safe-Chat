@@ -12,7 +12,7 @@ jobs:
 
       - name: Create release
         id: release
-        uses: lumynou5/github-release-action
+        uses: lumynou5/github-release-action@v1
         with:
           token: ${{github.token}}
 

@@ -32,5 +32,5 @@ jobs:
           GITHUB_TOKEN: ${{github.token}}
         with:
           upload_url: ${{steps.release.outputs.upload-url}}
-          asset_name: 1.19.1
+          asset_name: 1.19.1.jar
           asset_path: build/libs/*.jar

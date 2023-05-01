@@ -1,0 +1,36 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Create release
+        id: release
+        uses: lumynou5/github-release-action
+        with:
+          token: ${{github.token}}
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: adopt
+          java-version: 17
+          cache: gradle
+
+      - name: Build
+        run: ./gradlew jar
+
+      - name: Upload asset
+        uses: sekwah41/upload-release-assets@v1
+        env:
+          GITHUB_TOKEN: ${{github.token}}
+        with:
+          upload_url: ${{steps.release.outputs.upload-url}}
+          asset_name: 1.19.1
+          asset_path: build/libs/*.jar

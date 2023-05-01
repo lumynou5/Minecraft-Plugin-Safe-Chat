@@ -1,4 +1,4 @@
-package luminous.safechat.util;
+package lumynous.safechat.util;
 
 import org.jetbrains.annotations.NotNull;
 

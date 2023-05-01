@@ -1,6 +1,6 @@
-package luminous.safechat;
+package lumynous.safechat;
 
-import luminous.safechat.util.Fmt;
+import lumynous.safechat.util.Fmt;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

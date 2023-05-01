@@ -5,10 +5,9 @@ All notable changes to this project will be documented in this file.
 Released on:
 ### Added
 - `reload-config` command to reload the configurations.
-### Changed
-- The colors in message format configurations are formatted when enabled now.
 ### Fixed
 - Missing spaces in direct messages.
+- Colors used in the format are formatted when the configuration loaded now.
 ### Removed
 - Test command.
 

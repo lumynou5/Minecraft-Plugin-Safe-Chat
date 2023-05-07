@@ -20,5 +20,6 @@ All notable changes to this project will be documented in this file.
 - Message re-sending.
 - Test command.
 
+[2.0.0]: https://github.com/lumynou5/Minecraft-Plugin-Safe-Chat/releases/tag/v2.0.0
 [1.1.0]: https://github.com/lumynou5/Minecraft-Plugin-Safe-Chat/releases/tag/v1.1.0
 [1.0.0]: https://github.com/lumynou5/Minecraft-Plugin-Safe-Chat/releases/tag/v1.0.0
